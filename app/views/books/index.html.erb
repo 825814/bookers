@@ -1,9 +1,6 @@
 <h1>Books</h1>
 
-<% @books.each do |book| %>
-
-  
-  
+<body>
   <table>
     <thead>
       <tr>
@@ -12,7 +9,9 @@
         <th colspan="3"></th>
       </tr>
     </thead>
-    
+
+<% @books.each do |book| %>
+
     <tbody>
       <tr>
         <td><%= book.title %></td>
@@ -20,11 +19,21 @@
         <td>
           <%= link_to "Show", 'book_path(book.id)' %>
         </td>
+        <td>
+          <%= link_to "Edit", 'edit_book_path(@book.id)' %>
+        </td>
+        <td>
+          <%= link_to "Destroy", 'destroy_book_path(@book.id)', method: :delete, "data-confirm" => "本当に削除しますか？" %>
+        </td>
       </tr>
     </tbody>
-  </table>
-  
-  
-  
-  
+    
 <% end %>
+    
+  </table>
+</body>
+  
+  
+  
+  
+
