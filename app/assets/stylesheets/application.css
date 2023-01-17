@@ -31,3 +31,7 @@ tbody>tr>td {
 body, p {
   margin: 33px;
 }
+
+div {
+  margin-bottom: 10px;
+}
